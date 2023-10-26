@@ -3,22 +3,30 @@
  * Date: October 25th, 2023
  * Purpose: Fun
  */
-// richarad sis cool
-
+import java.util.Objects;
+import java.util.Scanner;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
 
 public class User {
 
+    Scanner in = new Scanner(System.in);
     //instance Variable
+
+
+    //User
     String username;
     int userid;
     double userrobux;
 
+    //Stats
     double robux_per_sec = 1;
     int gain_delay = 1000;
 
+    //Upgrades
+    double robux_multiplier = 1;
 
 
 
@@ -58,8 +66,8 @@ public class User {
 
             public void run(){
 
-                userrobux += robux_per_sec;
-                System.out.println(userrobux);
+                userrobux += robux_per_sec * robux_multiplier;
+                //System.out.println(userrobux);
 
                 }
 
@@ -73,9 +81,40 @@ public class User {
 
     //SHOWS AMOUNT OF CURRENT ROBUX
     public void wallet(){
-        System.out.println("Wallet: " + userrobux);
+        System.out.println("Robux: " + userrobux);
     }
+
+    //SHOW STATS
+    public void stats(){
+        System.out.println("");
+    }
+
+    public void store(){
+        String picks;
+        int upg_cost = 20;
+        int sold_items = 0;
+
+        System.out.println("Would you like to make a Shirt or a game  ( s / g )");
+        picks = in.nextLine();
+        if (Objects.equals(picks , "s"){
+            System.out.println("$50, are you  sure? (y / n)");
+            picks = in.nextLine();
+            if (Objects.equals(picks , "s"){
+        }
+
+        }
+
+        System.out.println("Would you like to upgrade multiplier to " + robux_multiplier + 1 + "? ( y / n )");
+        picks = in.nextLine();
+
+        if (Objects.equals(multi_choice, "y") && (userrobux >= upg_cost){
+
+        }
+
+
     //Upgrades
+
+
 
 
 
