@@ -3,7 +3,7 @@
  * Date: October 25th, 2023
  * Purpose: Fun
  */
-
+// init commit
 
 import java.util.Timer;
 import java.util.TimerTask;
