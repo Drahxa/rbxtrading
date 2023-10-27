@@ -9,6 +9,10 @@
     COMMANDS:
     .wallet (Shows Current Money)
 
+    .store (Buys Upgrades)
+
+    .stats (Shows Progress)
+
 
  */
 import java.util.Objects;
@@ -28,7 +32,7 @@ public class Main {
         //rupa.gainRobux();
 
 
-        System.out.println("Welcome, You'll gain Robux every second, how many can you get? (Type: END, to finish your section)\n\n\n");
+        System.out.println("\n\n\nWelcome, You'll gain Robux every second, how many can you get? (Type: END, to finish your section)\n");
 
         while (command != "END") {
 
@@ -42,9 +46,12 @@ public class Main {
 
 
                 //MULTIPLIERS
-            }else if (Objects.equals(command, ".stats")){
-                richard.multipliers();
+            }else if (Objects.equals(command, ".stats")) {
+                richard.stats();
 
+
+            }else if (Objects.equals(command, ".store")){
+                richard.store();
 
 
                 // FINISH PROGRAM
