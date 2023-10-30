@@ -25,7 +25,7 @@ public class Main {
         String command = "Continue"; //MAIN VARIABLE FOR INPUT
 
         //_______________________________________________
-        User richard = new User("Richard", 001);
+        User richard = new User("Eduardo", 001);
         richard.gainRobux();
         //-----------------------------------------------|
         //User rupa = new User("Rupawr", 002);
