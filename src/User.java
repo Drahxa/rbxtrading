@@ -52,7 +52,7 @@ public class User {
         username = name;
         userid = id;
         userrobux = 0;
-        robux_per_sec = 1;
+        robux_per_sec = 50;
     }
 
 
@@ -76,7 +76,8 @@ public class User {
                 int shirtChance = rand.nextInt(shirt_amount + 1);
 
                 if (shirtChance >= 1 && sold_items > 0) {
-                    userrobux += (robux_per_sec + 5) * robux_multiplier;
+                    sold_items += 1;
+                    userrobux += (robux_per_sec + 5 ) * robux_multiplier;
                     time_played ++;
                 }else{
                     userrobux += robux_per_sec * robux_multiplier;
@@ -130,8 +131,10 @@ public class User {
             //MULTIPLIER UPGRADE
         }else if(Objects.equals(picks , "m") && userrobux >= multiply_Cost){
             System.out.println("Multiplier upgrade has been bought");
+            userrobux -= multiply_Cost;
             multiply_Cost *= 2;
             robux_multiplier ++;
+
 
         }else if(Objects.equals(picks , "m") && userrobux <= multiply_Cost){
                 System.out.println("You don't have enough Robux");

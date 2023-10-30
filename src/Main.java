@@ -25,8 +25,8 @@ public class Main {
         String command = "Continue"; //MAIN VARIABLE FOR INPUT
 
         //_______________________________________________
-        User richard = new User("Richard", 001);
-        richard.gainRobux();
+        User eduardo = new User("Eduardo", 001);
+        eduardo.gainRobux();
         //-----------------------------------------------|
         //User rupa = new User("Rupawr", 002);
         //rupa.gainRobux();
@@ -42,16 +42,16 @@ public class Main {
 
             //WALLET
             if (Objects.equals(command, ".wallet")) {
-                richard.wallet();
+                eduardo.wallet();
 
 
                 //MULTIPLIERS
             }else if (Objects.equals(command, ".stats")) {
-                richard.stats();
+                eduardo.stats();
 
 
             }else if (Objects.equals(command, ".store")){
-                richard.store();
+                eduardo.store();
 
 
                 // FINISH PROGRAM
